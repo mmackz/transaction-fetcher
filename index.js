@@ -29,8 +29,8 @@ app.post('/getTransactionData', async (req, res) => {
 
         const responseData = {
             chainId: +transaction.chainId,
-            from: transaction.from,
-            to: transaction.to,
+            from: transaction.from.toLowerCase(),
+            to: transaction.to.toLowerCase(),
             hash: transaction.hash,
             input: transaction.input,
             value: transaction.value
