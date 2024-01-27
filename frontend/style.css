@@ -1,0 +1,123 @@
+/* Basic reset for styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+/* Form styling */
+#transactionForm {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.chain-dropdown {
+    -webkit-appearance: none;  /* Removes default styling of the dropdown for WebKit browsers */
+    -moz-appearance: none;     /* Removes default styling of the dropdown for Mozilla browsers */
+    appearance: none;          /* Removes default styling of the dropdown */
+    width: 100%;
+    padding: 10px 30px 10px 10px; /* Adjusted padding: top, right, bottom, left */
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23007bff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position for the custom arrow */
+    background-size: 12px; /* Size of the custom arrow */
+}
+
+.chain-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.chain-dropdown option {
+    padding: 10px;
+}
+
+#copyButton {
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: 20rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745; /* Green background */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copyButton:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+
+/* Results display styling */
+#result {
+    margin-top: 20px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+#result, #copyButton {
+    display: none;
+}

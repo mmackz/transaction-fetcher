@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plugin Transaction Data</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Plugin Transaction Fetcher</h1>
+    <form id="transactionForm">
+        <input type="text" id="transactionHash" placeholder="Transaction Hash">
+      <div class='chain-select'>
+        <span>Select Chain: </span>
+        <select id="network" class='chain-dropdown'>
+            <option value="eth-mainnet">Ethereum</option>
+            <option value="opt-mainnet">Optimism</option>
+            <option value="arb-mainnet">Arbitrum</option>
+            <option value="polygon-mainnet">Polygon</option>
+            <option value="base-mainnet">Base</option>
+        </select>
+      </div>
+        <button type="submit">Fetch Data</button>
+    </form>
+    <pre id="result"></pre>
+    <button id="copyButton">Copy to Clipboard</button>
+    <script src="main.js"></script>
+</body>
+</html>
