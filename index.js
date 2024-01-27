@@ -7,14 +7,11 @@ require('dotenv').config();
 
 const app = express();
 
-// Use middleware
 app.use(cors()); // Enable CORS for all routes
 app.use(bodyParser.json()); // Enable parsing JSON request bodies
 
-// Serve static files from the 'frontend' directory
 app.use(express.static(path.join(__dirname, 'frontend')));
 
-// API route for fetching Ethereum transaction data
 app.post('/getTransactionData', async (req, res) => {
   const { transactionHash, network } = req.body;
 
@@ -42,7 +39,6 @@ app.post('/getTransactionData', async (req, res) => {
     }
 });
 
-// All other GET requests not handled before will return the Vite-built front-end
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
 });

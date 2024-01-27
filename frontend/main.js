@@ -20,10 +20,10 @@ document.getElementById('transactionForm').addEventListener('submit', async func
             document.getElementById('result').style.display = 'block';
             document.getElementById('copyButton').style.display = 'block';
         } else {
-            const errorText = await response.text(); // Get the error as text
-            document.getElementById('result').textContent = errorText; // Display the error text
+            const errorText = await response.text();
+            document.getElementById('result').textContent = errorText;
             document.getElementById('result').style.display = 'block';
-            document.getElementById('copyButton').style.display = 'none'; // Hide the copy button in case of error
+            document.getElementById('copyButton').style.display = 'none'; 
         }
     } catch (error) {
         console.error('Error:', error);
